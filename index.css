@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Quicksand&display=swap');
+
+
+*{
+    font-family: "Jura", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url(https://wallpapercave.com/wp/wp13101004.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+    color: darkslateblue;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+.navbar .redes{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color: rgb(76, 53, 92);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.action_btn:hover{
+    background-color: rgb(88, 56, 96);
+    scale: 1.05;
+    color: #fff;
+}
+.action_btn:active{
+    transition: 0.95;
+}
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+height: 270px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu .social {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 37%; 
+}
+.dropdown_menu .social i{
+    margin-left: 6px;
+}
+
+section#hero{
+    height: calc(100vh - 60px);
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+section#ola{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3586ff;
+    overflow: hidden;
+}
+
+section .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(/imagenes/wave.png);
+    background-size: 1000px 100px;
+}
+
+section .wave.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+section .wave.wave2{
+    animation: animate2 30s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+section .wave.wave3{
+    animation: animate1 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+section .wave.wave4{
+    animation: animate2 15s linear infinite;
+    z-index: 998;
+    opacity: 0.7;
+    animation-delay: -2s;
+    bottom: 20px;
+}
+@keyframes animate{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate2{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+
+
+#hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+    .navbar .redes{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+#acerca{
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 15px;
+    color: #fff;
+    display: flex;
+    
+    }
+    .fondo_seccion{
+        height: 125vh;
+        background-color: #000;
+        background-image: url(https://wallpapers.com/images/hd/bloodborne-4k-hd-9073ysygvh2kq1bk.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    #acerca .contenedor_foto{
+        max-width: 100px;
+        margin-right: 100px;
+    }
+    #acerca .contenedor_foto img{
+        padding: 20px;
+        width: 400%;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+    #acerca .acerca{
+        margin:  0 40px;
+    }
+    #acerca .acerca .titulo-seccion{
+        font-family: "Ultra", serif;
+        font-size:  30px;
+        text-transform: uppercase;
+        color: rgb(92, 121, 71);
+        text-decoration: underline;
+        text-decoration-color: rgb(45, 77, 49);
+        text-decoration-thickness: 3px;
+    }
+    #acerca .acerca h2{
+        font-size:  34px;
+        font-weight: bold;
+        margin: 20px 0;
+        letter-spacing: 2px;
+        color: rgb(255, 255, 255);
+    }
+    #acerca .acerca  span{
+        color: rgb(119, 156, 95);
+    }
+    #acerca .acerca  h3{
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+    
+    #acerca .acerca  p{
+        font-size: 14px;
+        line-height: 25px;
+        color: rgb(237, 237, 237);
+        margin-bottom: 12px;
+        text-align: justify;
+    }
+
+    #acerca .acerca a{
+        display: inline-block;
+        text-decoration: none;
+        color: rgb(183, 183, 183);
+        border-radius: 30px;
+        padding: 10px 20px;
+        border: 1px solid rgb(45, 77, 49) ;
+        margin-top: 30px;
+        transition: .5s;
+    }
+
+    #acerca .acerca a:hover{
+        background-color: rgb(30, 53, 31);
+        color: #fff;
+        transition: .3s;
+    }
+
+    
+    #servicios{
+        padding: 100px 15px;
+        text-align: center;
+        background-color: #fff ;
+    }
+#servicios  .titulo_seccion1{
+    font-size:  30px;
+        text-transform: uppercase;
+        color: rgb(0, 0, 0);
+        text-decoration: underline;
+        text-decoration-color: rgb(104, 104, 104);
+        text-decoration-thickness: 3px;
+}
+
+#servicios .fila{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+#servicios .fila .servicio{
+    max-width: 350px;
+    background-color: rgb(188, 188, 188);
+    padding: 30px;
+    margin: 0 5px;
+    border-radius: 15px ;
+    transition: .5s;
+}
+#servicios .fila .servicio:hover{
+    box-shadow: 5px 5px 10px rgb(46, 46, 46), -5px -5px 10px rgb(64, 64, 64);
+}
+
+#servicios .fila .servicio h4{
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+#servicios .fila .servicio .icono{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(51, 51, 51);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+#servicios .fila .servicio hr{
+    width: 30%;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    margin-bottom: 25px;
+}
+#servicios .fila .servicio ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#servicios .fila .servicio p{
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.contenedor-skills{
+    background: linear-gradient(#eb5a5acc, rgba(33,16,16,7)), url(https://img.freepik.com/fotos-premium/fondo-pantalla-epico-dragon-fuego_897844-97.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.contenedor-skills .skill{
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.contenedor-skills .skill    .info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-skills .skill  .lista{
+    display: inline-block;
+    margin-right: 20px;
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+}
+
+.contenedor-skills .skill  .barra{
+    background-color: #91919191;
+    width: 100%;
+    height: 6px;
+    margin: 10px 0;
+}
+.contenedor-skills .skill  .barra .barra_progreso{
+    background-color: rgb(255, 0, 0);
+    width: 90%;
+    height: 6px;
+    animation: progreso1 3s forwards;
+}
+
+@keyframes progreso1{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+.contenedor-skills .skill  .barra .barra_progreso2{
+    background-color: rgb(255, 0, 0);
+    width: 50%;
+    height: 6px;
+    animation: progreso2 3s forwards;
+}
+
+@keyframes progreso2{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+.contenedor-skills .skill  .barra .barra_progreso3{
+    background-color: rgb(255, 0, 0);
+    width: 40%;
+    height: 6px;
+    animation: progreso3 3s forwards;
+}
+
+@keyframes progreso3{
+    0%{
+        width: 0;
+    }
+    40%{
+        width: 40%;
+    }
+}
+
+.contenedor-skills .skill  .barra .barra_progreso4{
+    background-color: rgb(255, 0, 0);
+    width: 85%;
+    height: 6px;
+    animation: progreso4 3s forwards;
+}
+
+@keyframes progreso4{
+    0%{
+        width: 0;
+    }
+    85%{
+        width: 85%;
+    }
+}
+
+#portafolio .fondotrabajo{
+    max-width: 1100px;
+    padding: 100px 0;
+    margin: auto;
+}
+
+
+#portafolio .titulo_seccion{
+    text-align: center;
+    font-size:  30px;
+    text-transform: uppercase;
+    color: rgb(32, 32, 32);
+    text-decoration: underline;
+    text-decoration-color: rgb(109, 109, 109);
+    text-decoration-thickness: 5px;
+}
+
+#portafolio .fila{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+#portafolio .fila .proyecto{
+    max-width: 450px;
+    border: 1px solid #000;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#portafolio .fila .proyecto img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    object-fit: cover;
+    transition: .5s;
+
+}
+
+#portafolio .fila .proyecto:hover img{
+    filter: grayscale(0);
+}
+
+#contacto{
+
+    padding: 100px 15px;
+
+}
+
+#contacto .titulo-seccion{
+
+    font-size: 22px;
+
+    text-transform: uppercase;
+
+    color: #111135;
+
+    text-decoration: underline;
+
+    text-decoration-color: #d3d3d3;
+
+    text-decoration-thickness: 5px;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+#contacto .contenedor-form{
+
+    max-width: 990px;
+
+    margin: auto;
+
+
+
+}
+
+#contacto .contenedor-form .fila{
+
+    margin-bottom: 15px;
+
+}
+
+#contacto .contenedor-form .mitad{
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+
+#contacto .contenedor-form input, #contacto .contenedor-form textarea{
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    border: none;
+
+    border: 1px solid #919191;
+
+
+
+}
+
+
+
+#contacto .contenedor-form .mitad input{
+
+    width: 48%;
+
+
+
+}
+
+
+
+#contacto .contenedor-form .fila .input-full{
+
+    width: 100%;
+
+
+
+}
+
+
+
+#contacto .btn-enviar{
+
+    display: block;
+
+    margin: auto;
+
+    cursor: pointer;
+
+    transition: .5s;
+
+    padding: 10px 15px;
+
+
+
+}
+
+
+
+#contacto .btn-enviar:hover{
+
+    background-color: #111135;
+
+    color: #fff;
+
+}
